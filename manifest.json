@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Zone",
+  "version": "0.1",
+  "background": {
+    "scripts": ["js/eventPage.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches":  ["http://*/*", "https://*/*"],
+      "js": ["js/jquery-3.2.1.js", "js/content.js", "js/popup.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs"
+        ]
+}
